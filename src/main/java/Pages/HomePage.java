@@ -27,5 +27,4 @@ public class HomePage {
        test.info("Checking Insider Logo");
         elementHelper.findElement(insiderLogo);
     }
-
 }

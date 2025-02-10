@@ -10,7 +10,6 @@ public class NavigationBar {
     ElementHelper elementHelper;
     ExtentTest test;
 
-
     By navBarItem = By.cssSelector("#navbarDropdownMenuLink");
     By dropdownMenuItem = By.cssSelector(".show .dropdown-sub");
 
@@ -28,5 +27,4 @@ public class NavigationBar {
         test.info("Navigate to " + item);
         elementHelper.clickWithText(dropdownMenuItem, item);
     }
-
 }

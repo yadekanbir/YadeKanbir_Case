@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -19,7 +18,6 @@ public class ElementHelper {
     WebDriver driver;
     WebDriverWait wait;
     Actions actions;
-    Select select;
 
     public ElementHelper(WebDriver driver) {
         this.driver = driver;
@@ -76,6 +74,11 @@ public class ElementHelper {
         }
     }
 
+    public void waitUntilElementVisible(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
     public void clickWithText(By by, String text) {
         boolean check = false;
         for (WebElement elem : findElements(by)) {
@@ -102,7 +105,6 @@ public class ElementHelper {
 
         Assert.assertTrue(allElementsValid, "Element text does not contain required words: " + text1 + " " + text2);
     }
-
 
     public void checkAllElementsText(By by, String text) {
         boolean check = true;

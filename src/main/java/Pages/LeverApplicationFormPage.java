@@ -11,7 +11,6 @@ public class LeverApplicationFormPage {
     ElementHelper elementHelper;
     ExtentTest test;
 
-
     By applyThisJobButton = By.xpath("//div[@class='postings-btn-wrapper']/a[.='Apply for this job']");
 
     public LeverApplicationFormPage(WebDriver driver, ExtentTest test) {
