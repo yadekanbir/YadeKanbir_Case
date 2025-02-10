@@ -28,6 +28,7 @@ public class InterviewTestCase {
 
     @Test (description = "Insider Interview Text Case")
     public void insiderTestCase() {
+        homePage.checkInsiderLogo();
         homePage.acceptAllCookies();
         navigationBar.clickNavBarItem("Company");
         navigationBar.clickNavBarDropdownMenuItem("Careers");
