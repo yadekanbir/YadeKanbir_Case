@@ -21,7 +21,7 @@ public class OpenPositionsPage {
     By jobsLocation = By.cssSelector(".position-list>div>div>div");
     By jobsDepartment = By.cssSelector(".position-department");
     By viewRoleButton = By.cssSelector(".btn.btn-navy.rounded.pt-2.pr-5.pb-2.pl-5");
-    By city = By.cssSelector("#jobs-list > div:nth-of-type(1) .position-location");
+    By city = By.cssSelector("#jobs-list > div:nth-of-type(3) .position-location");
 
     public OpenPositionsPage(WebDriver driver, ExtentTest test) {
         this.elementHelper = new ElementHelper(driver);
