@@ -100,7 +100,7 @@ public class ElementHelper {
             }
         }
 
-        Assert.assertTrue(allElementsValid, "Bazı elementlerde ne '" + text1 + "' ne de '" + text2 + "' kelimesi bulundu.");
+        Assert.assertTrue(allElementsValid, "Element text does not contain required words: " + text1 + " " + text2);
     }
 
 
