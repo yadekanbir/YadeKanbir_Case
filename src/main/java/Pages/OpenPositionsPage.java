@@ -21,7 +21,7 @@ public class OpenPositionsPage {
     By jobsLocation = By.cssSelector(".position-list>div>div>div");
     By jobsDepartment = By.cssSelector(".position-department");
     By viewRoleButton = By.cssSelector(".btn.btn-navy.rounded.pt-2.pr-5.pb-2.pl-5");
-    By v = By.cssSelector("#jobs-list > div:nth-of-type(1) .position-location");
+    By city = By.cssSelector("#jobs-list > div:nth-of-type(1) .position-location");
 
     public OpenPositionsPage(WebDriver driver, ExtentTest test) {
         this.elementHelper = new ElementHelper(driver);
@@ -32,7 +32,7 @@ public class OpenPositionsPage {
         test.info("Select location: " + location);
         elementHelper.waitDropdown(drpdownLWait, drpBtn_Location);
         elementHelper.clickWithText(drpdownList, location);
-        elementHelper.waitUntilElementVisible(v);
+        elementHelper.waitUntilElementVisible(city);
     }
 
     public void selectDepartment(String department) {
